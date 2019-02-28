@@ -189,20 +189,6 @@
   },
   {
     "type": 1,
-    "title": "Elasticsearch",
-    "description": "Open-source search and analytics engine",
-    "categories": ["database"],
-    "platform": "linux",
-    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
-    "image": "elasticsearch:latest",
-    "ports": [
-      "9200/tcp",
-      "9300/tcp"
-    ],
-    "volumes": [{"container": "/usr/share/elasticsearch/data"}]
-  },
-  {
-    "type": 1,
     "title": "Gitlab CE",
     "description": "Open-source end-to-end software development platform",
     "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
@@ -290,54 +276,6 @@
         "label": "SA password"
       }
     ]
-  },
-  {
-    "type": 1,
-    "title": "SQL Server",
-    "description": "Microsoft SQL Server Developer for Windows containers",
-    "categories": ["database"],
-    "platform": "windows",
-    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-    "image": "microsoft/mssql-server-windows-developer:latest",
-    "ports": [
-      "1433/tcp"
-    ],
-    "env": [
-      {
-        "name": "ACCEPT_EULA",
-        "set": "Y"
-      },
-      {
-        "name": "sa_password",
-        "label": "SA password"
-      }
-    ],
-    "volumes": [{"container": "C:/temp/"}]
-  },
-  {
-    "type": 1,
-    "title": "SQL Server Express",
-    "description": "Microsoft SQL Server Express for Windows containers",
-    "categories": ["database"],
-    "platform": "windows",
-    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-    "image": "microsoft/mssql-server-windows-express:latest",
-    "ports": [
-      "1433/tcp"
-    ],
-    "env": [
-      {
-        "name": "ACCEPT_EULA",
-        "set": "Y"
-      },
-      {
-        "name": "sa_password",
-        "label": "SA password"
-      }
-    ],
-    "volumes": [{"container": "C:/temp/"}]
   },
   {
     "type": 1,
@@ -689,21 +627,6 @@
       "55413/tcp", "55414/tcp", "55415/tcp", "35622/tcp"
     ],
     "volumes": [{"container": "/var/urbackup"}]
-  },
-  {
-    "type": 1,
-    "title": "File browser",
-    "description": "A web file manager",
-    "note": "Default credentials: admin/admin",
-    "categories": ["filesystem", "storage"],
-    "platform": "linux",
-    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
-    "image": "filebrowser/filebrowser:latest",
-    "ports": [
-      "80/tcp"
-    ],
-    "volumes": [{"container": "/data"}, {"container": "/srv"}],
-    "command": "--port 80 --database /data/database.db --scope /srv"
   },
   {
     "type": 1,
